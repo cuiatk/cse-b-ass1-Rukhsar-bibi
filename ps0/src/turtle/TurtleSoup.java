@@ -129,17 +129,17 @@ public class TurtleSoup {
      * @param turtle the turtle context
      */
     public static void drawPersonalArt(Turtle turtle) {
-    	int sides = 5;
-        int sideLength = 100;
+    	int sides = 9;
+        int sideLength = 150;
         for(int x = sides; x > 0; x--)
         {
-            for(int y = 30; y>0; y-=10)
+            for(int y = 70; y>0; y-=50)
             {
-                drawRegularPolygon(turtle, 5, y);
+                drawRegularPolygon(turtle, 9, y);
             }
-            drawRegularPolygon(turtle, 5, 50);
+            drawRegularPolygon(turtle, 9, 50);
             turtle.forward(sideLength);
-            turtle.turn(270.0 - calculateRegularPolygonAngle(sides));
+            turtle.turn(300.0 - calculateRegularPolygonAngle(sides));
         }
     }
 
