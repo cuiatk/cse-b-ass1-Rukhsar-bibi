@@ -8,19 +8,7 @@ import java.util.ArrayList;
 
 public class TurtleSoup {
 
-    /**
-     * Draw a square.
-     * 
-     * @param turtle the turtle context
-     * @param sideLength length of each side
-     */
-    public static void drawSquare(Turtle turtle, int sideLength) {
-    	 for(int x = 0; x < 4; x++)
-    	 {
-             turtle.forward(sideLength);
-             turtle.turn(90.0);
-         }
-    }
+
 
     /**
      * Determine inside angles of a regular polygon.
@@ -128,20 +116,8 @@ public class TurtleSoup {
      * 
      * @param turtle the turtle context
      */
-    public static void drawPersonalArt(Turtle turtle) {
-    	int sides = 9;
-        int sideLength = 150;
-        for(int x = sides; x > 0; x--)
-        {
-            for(int y = 70; y>0; y-=50)
-            {
-                drawRegularPolygon(turtle, 9, y);
-            }
-            drawRegularPolygon(turtle, 9, 50);
-            turtle.forward(sideLength);
-            turtle.turn(300.0 - calculateRegularPolygonAngle(sides));
-        }
-    }
+    
+    
 
     /**
      * Main method.
@@ -153,15 +129,12 @@ public class TurtleSoup {
     public static void main(String args[]) {
         DrawableTurtle turtle = new DrawableTurtle();
 
-        drawSquare(turtle, 40);
 
         // draw the window
         turtle.draw();
         
-        drawRegularPolygon(turtle,5, 60);
-        drawPersonalArt(turtle);
-       
-        turtle.draw();
+        drawRegularPolygon(turtle,6, 60);
+        
         
         
     }
